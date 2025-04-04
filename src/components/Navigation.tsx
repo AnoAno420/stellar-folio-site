@@ -35,7 +35,7 @@ const Navigation = () => {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-8">
-          {['about', 'experience', 'tech', 'tips', 'contact'].map((item) => (
+          {['about', 'experience', 'tech', 'projects', 'tips', 'contact'].map((item) => (
             <button 
               key={item}
               onClick={() => scrollToSection(item)} 
@@ -61,7 +61,7 @@ const Navigation = () => {
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-navy/95 backdrop-blur-sm shadow-lg animate-fade-in">
           <div className="container mx-auto py-4 flex flex-col space-y-4">
-            {['about', 'experience', 'tech', 'tips', 'contact'].map((item) => (
+            {['about', 'experience', 'tech', 'projects', 'tips', 'contact'].map((item) => (
               <button 
                 key={item}
                 onClick={() => scrollToSection(item)} 
