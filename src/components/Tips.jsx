@@ -2,13 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Lightbulb, Rocket, Clock, Code, Shield, Users } from 'lucide-react';
 
-type Tip = {
-  icon: React.ReactNode;
-  title: string;
-  content: string;
-};
-
-const tips: Tip[] = [
+const tips = [
   {
     icon: <Lightbulb className="h-6 w-6 text-highlight" />,
     title: "Start with Planning",
@@ -43,7 +37,7 @@ const tips: Tip[] = [
 
 const Tips = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useRef(null);
   
   useEffect(() => {
     const observer = new IntersectionObserver(

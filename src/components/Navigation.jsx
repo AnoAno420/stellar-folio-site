@@ -21,7 +21,7 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
+  const scrollToSection = (id) => {
     setMobileMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {

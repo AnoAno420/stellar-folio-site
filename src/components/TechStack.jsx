@@ -1,13 +1,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 
-type Skill = {
-  name: string;
-  level: number;
-  category: 'frontend' | 'backend' | 'other';
-};
-
-const skills: Skill[] = [
+const skills = [
   { name: "React", level: 90, category: "frontend" },
   { name: "JavaScript", level: 85, category: "frontend" },
   { name: "TypeScript", level: 80, category: "frontend" },
@@ -24,8 +18,8 @@ const skills: Skill[] = [
 
 const TechStack = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [filter, setFilter] = useState<'all' | 'frontend' | 'backend' | 'other'>('all');
-  const sectionRef = useRef<HTMLElement>(null);
+  const [filter, setFilter] = useState('all');
+  const sectionRef = useRef(null);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -71,7 +65,7 @@ const TechStack = () => {
               {['all', 'frontend', 'backend', 'other'].map((category) => (
                 <button
                   key={category}
-                  onClick={() => setFilter(category as any)}
+                  onClick={() => setFilter(category)}
                   className={`px-4 py-2 rounded-md transition-all ${
                     filter === category 
                       ? 'bg-highlight text-navy font-medium' 

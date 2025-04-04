@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useRef(null);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
