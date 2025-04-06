@@ -1,0 +1,126 @@
+
+# Custom Styles Guide
+
+This document contains all the custom styles and utility classes available in the project.
+
+## Text Utilities
+
+### Text Effects
+- `text-gradient` - Applies a gradient background to text (from highlight to primary)
+- `glow` - Adds a cyan text shadow effect
+
+## Navigation Elements
+
+- `nav-link` - Base class for navigation links with hover underline animation
+- `nav-link::after` - Creates the underline effect when hovering
+
+## Button Effects
+
+- `btn-glow` - Adds a cyan glow effect to buttons with hover state
+- `btn-glow:hover` - Enhances glow effect and adds a slight lift on hover
+
+## Animation Classes
+
+- `float` - Makes an element float up and down in a gentle animation
+- `pulse-glow` - Creates a pulsing glow effect around an element
+
+### Tailwind Animation Classes
+- `animate-fade-in` - Fades in an element
+- `animate-fade-out` - Fades out an element
+- `animate-scale-in` - Scales in an element
+- `animate-slide-in-left` - Slides in an element from the left
+- `animate-slide-in-right` - Slides in an element from the right
+- `animate-rotate-in` - Rotates in an element slightly
+
+## Background & Layout
+
+- `glass-morphism` (if implemented) - Creates a glass-like effect
+- `neo-blur` (if implemented) - Creates a modern blur effect with dark background
+
+## Section Styles
+
+- Background colors:
+  - `bg-darkNavy` - Very dark navy color
+  - `bg-navy` - Dark navy color
+  - `bg-slate` - Slate color
+
+## Responsive Design
+
+The project uses Tailwind's responsive utilities:
+- `sm:` - Small screens (640px and up)
+- `md:` - Medium screens (768px and up)
+- `lg:` - Large screens (1024px and up)
+- `xl:` - Extra large screens (1280px and up)
+- `2xl:` - 2X Extra large screens (1536px and up)
+
+## Custom Color Palette
+
+- `highlight` - Cyan color (#00FFFF) used for accent elements
+- `darkNavy` - Very dark navy color (#080E1C) for backgrounds
+- `navy` - Dark navy color (#0F172A) for secondary backgrounds
+- `slate` - Slate color (#1E293B) for card backgrounds
+
+## Tailwind CSS Variables
+
+These CSS variables are used in the Tailwind theme:
+- `--background` - Background color
+- `--foreground` - Foreground color
+- `--card` - Card background color
+- `--card-foreground` - Card text color
+- `--popover` - Popover background color
+- `--popover-foreground` - Popover text color
+- `--primary` - Primary color
+- `--primary-foreground` - Primary text color
+- `--secondary` - Secondary color
+- `--secondary-foreground` - Secondary text color
+- `--muted` - Muted color
+- `--muted-foreground` - Muted text color
+- `--accent` - Accent color
+- `--accent-foreground` - Accent text color
+- `--destructive` - Destructive color (for errors/warnings)
+- `--destructive-foreground` - Destructive text color
+- `--border` - Border color
+- `--input` - Input color
+- `--ring` - Focus ring color
+- `--radius` - Border radius value
+
+## Usage Examples
+
+### Text with Gradient & Glow
+```jsx
+<h1 className="text-gradient glow">Gradient Text with Glow</h1>
+```
+
+### Animated Element
+```jsx
+<div className="float">This content will float up and down</div>
+```
+
+### Button with Glow Effect
+```jsx
+<button className="bg-highlight text-navy hover:bg-highlight/90 btn-glow">
+  Glowing Button
+</button>
+```
+
+### Card with Background
+```jsx
+<div className="bg-slate p-6 rounded-lg">Card Content</div>
+```
+
+### Responsive Layout Example
+```jsx
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {/* Content */}
+</div>
+```
+
+### Animated Element with Delay
+```jsx
+<div 
+  className="opacity-0 animate-fade-in" 
+  style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}
+>
+  Content that fades in with delay
+</div>
+```
